@@ -1,0 +1,25 @@
+<div class="content" role="main">
+
+    <!-- Highlight Card -->
+    <div class="card highlight-card card-small">
+        <h4>Listado de Clientes</h4>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Direccion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes">
+                <th scope="row">{{cliente.id}}</th>
+                <td>{{cliente.name}}</td>
+                <td>{{cliente.surname}}</td>
+                <td>{{cliente.address}}</td>
+            </tr>
+        </tbody>
+    </table>

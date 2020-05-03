@@ -1,0 +1,28 @@
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small">
+    <h4>Alta de Cliente</h4>
+  </div>
+
+  <form [formGroup]="registerForm" novalidate>
+    <div class="row">
+      <div class="col">
+          <input type="text" placeholder="Nombre" class="form-control-edited" formControlName="name">
+          <input type="text" placeholder="Apellido" class="form-control-edited" formControlName="surname">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input type="text" placeholder="Direccion" class="form-control form-control-line2" formControlName="address">
+        <p [hidden]="!registerForm.controls['name'].invalid && !registerForm.controls['surname'].invalid && !registerForm.controls['address'].invalid" 
+        class="text-danger text-center font-weight-bold">Todos los Campos son Requeridos</p>
+      </div>
+    </div>
+  </form>
+
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-outline-primary margin-top-8" type="submit" (click)="onSubmitForm()">Registrar</button>
+    </div>
+  </div>
